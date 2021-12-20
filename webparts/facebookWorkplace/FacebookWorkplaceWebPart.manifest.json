@@ -1,0 +1,24 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "8bc243c9-013a-4d4b-8400-7fad1b543433",
+  "alias": "FacebookWorkplaceWebPart",
+  "componentType": "WebPart",
+
+  "version": "*",
+  "manifestVersion": 2,
+
+  "requiresCustomScript": false,
+  "supportedHosts": ["SharePointWebPart"],
+
+  "preconfiguredEntries": [{
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70",
+    "group": { "default": "Other" },
+    "title": { "default": "Facebook Workplace" },
+    "description": { "default": "Show group feed from Workplace" },
+    "officeFabricIconFontName": "ActivityFeed",
+    "properties": {
+      "feedId": "543336625876806",
+      "numberOfPosts":4
+    }
+  }]
+}

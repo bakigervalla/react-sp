@@ -1,0 +1,81 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+
+$width         : 340px;
+$contentPadding: 8;
+$colorGray     : #666;
+
+.sidebar {
+  position   : absolute;
+  top        : 0px;
+  bottom     : 0px;
+  width      : $width;
+  background : white;
+  white-space: nowrap;
+  overflow   : hidden;
+  box-shadow : 0 0 5px 0 rgba(0, 0, 0, .4);
+  right      : -$width;
+  color      : $colorGray;
+
+  &.visible {
+    right      : 0px;
+    transition : right;
+    border-left: 1px solid #eaeaea;
+
+    .heading {
+      position  : relative;
+      display   : inline-flex;
+      background: #efefef;
+      width     : 100%;
+
+      .closeButton {
+        float  : left;
+        padding: 12px 12px 0 0;
+      }
+
+      .clear {
+        clear: both;
+      }
+    }
+
+    .content {
+      padding: $contentPadding;
+      color  : $colorGray;
+
+      .row {
+        @include ms-Grid-row;
+        padding: 20px;
+
+        .column {
+          @include ms-Grid-col;
+          @include ms-lg12;
+          @include ms-xl12;
+
+          .title {
+            @include ms-font-xl;
+            color        : #3788d8;
+            overflow-wrap: break-word;
+            word-break   : break-word;
+            white-space  : normal;
+            margin       : 20px 0;
+          }
+
+          h4 {
+            margin-bottom: 0;
+          }
+
+          .text {
+            font-size  : 16px;
+            font-weight: 400;
+          }
+
+          .description {
+            overflow-wrap: break-word;
+            word-break   : break-word;
+            white-space  : normal;
+            margin       : 20px 0;
+          }
+        }
+      }
+    }
+  }
+}

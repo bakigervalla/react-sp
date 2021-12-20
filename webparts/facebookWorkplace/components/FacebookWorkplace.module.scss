@@ -1,0 +1,149 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+@import "~office-ui-fabric-react/dist/sass/References.scss";
+@import "../../../styles/variables.module.scss";
+
+.facebookWorkplace {
+  .container {
+    margin: 0px auto;
+  }
+
+  .row {
+    @include ms-Grid-row;
+  }
+
+  .column {
+    @include ms-Grid-col;
+    float: inherit !important;
+  }
+
+  a {
+    cursor: pointer;
+  }
+
+  .box {
+
+    a.more {
+      text-decoration: none;
+      color: $ms-color-themePrimary;
+      font-style: italic;
+    }
+
+    border: 1px solid #ccc;
+    margin-bottom: $spacing*2;
+
+    .content {
+      padding: $spacing*2;
+
+      h1 {
+        font-size: 1.5rem;
+        margin-top: 4px;
+      }
+
+      h2 {
+        font-size: 1.2rem;
+      }
+    }
+
+    .footer {
+      background: $gray-1;
+      padding: $spacing;
+
+      a {
+        display: inline-block;
+        margin-right: 4px;
+        text-decoration: none;
+        color: #333;
+
+        &:hover {
+          color: black;
+        }
+      }
+
+      a.goto {
+        float: right;
+        display: block;
+        font-weight: bold;
+      }
+    }
+
+    .photo {
+      width: 100%;
+    }
+  }
+
+  .header {
+    background-color: #f7f7f7;
+    padding: 8px;
+    @include ms-font-l;
+
+    .avatar {
+      display: inline-block;
+      img {
+        border-radius: 50%;
+        height: 40px;
+      }
+    }
+    .title {
+      display: inline-block;
+      vertical-align: top;
+      padding-left: 8px;
+      span:first-child {
+        color: #2e82c6;
+        display: block;
+      }
+      span:nth-child(2) {
+        color: #999999;
+        display: block;
+        font-size: 0.8em;
+      }
+    }
+  }
+
+  .subTitle {
+    @include ms-font-l;
+  }
+
+  .description {
+    @include ms-font-m;
+  }
+
+  .toggle {
+    height: auto;
+    max-height: 15rem;
+    overflow-y: scroll;    
+    div.likes {
+      border-bottom: 1px solid #efefef;
+      margin: 0 8px;
+
+      padding: $spacing 0;
+      a {
+        font-size: 14px;
+        color: #2e82c6;
+        display: block;
+        text-decoration: none;
+        font-weight: 600;
+      }     
+    }
+    div.comments {
+      border-bottom: 1px solid #efefef;
+      margin: 0 8px;
+      padding: 10px 4px 10px 4px;
+      a {
+        font-size: 14px;
+        color: #2e82c6;
+        display: block;
+        text-decoration: none;
+        font-weight: 600;
+      }
+      div.commentDate {
+        color: #999999;
+        display: block;
+        font-size: 13px;
+        margin-bottom: 10px;
+      }      
+    }   
+    div:last-child {
+      border-bottom: none;
+    }
+  }
+}

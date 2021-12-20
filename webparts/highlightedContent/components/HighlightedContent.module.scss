@@ -1,0 +1,90 @@
+@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import "../../../styles/variables.module.scss";
+
+.news {
+.newsOpening {
+  position: relative;
+  margin-bottom: $spacing*2;
+
+  .row {
+      background-color: transparent;
+  }
+  p {
+      font-size: 1.2em;
+  }
+  a {
+      display: block;
+      height:350px;
+
+      .comments {
+          opacity: 0;
+          visibility: hidden;
+          color:#efefef;
+          position: relative;
+          bottom: -50px;
+          height: 0;
+      }
+      .shadow {
+          background: linear-gradient(rgba(0, 0, 0, 0.02) 57%, rgba(0, 0, 0, 0.5) 70%, rgba(0, 0, 0, 0.7) 100%);
+          position: absolute;
+          padding: 2rem;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          box-sizing: border-box;
+          color: #fff;
+          opacity: 1;
+          transition: opacity 400ms;
+      }
+
+      &:hover {
+          .shadow {
+              opacity: 0.6;
+              transition: opacity 400ms;
+          }
+          .comments {
+              display: block;
+              bottom: 0;
+              visibility: visible;
+              transition: visibility 0s, opacity 0.5s, bottom 400ms;
+              opacity: 1;
+              height: auto;
+          }
+      }
+      .background {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          background-position: center;
+          background-size: cover;          
+      }
+      .content {
+          h2{
+              font-weight: 100;
+              font-size: 2.5rem;
+              color: white;
+              margin-bottom: $spacing*2;
+              //font-family: "Segoe UI Light", "Segoe", Tahoma, Helvetica, Arial, sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+          }
+          .date {
+              margin-top: 1em;
+              font-size: 0.8em;
+              background: $brand-color;
+              padding: $spacing;
+              position: relative;
+              right: 16px;
+              padding-left: 16px;
+              text-transform: uppercase;
+              color: white;
+          }
+          margin: 16px;
+          position: absolute;
+          bottom: 0;
+      }                
+  }
+}
+}
